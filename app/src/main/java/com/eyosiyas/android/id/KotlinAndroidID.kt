@@ -12,9 +12,8 @@ class KotlinAndroidID {
 
     private fun uniqueIDGenerator(uuid: UUID): String {
         return try {
-            val drm = MediaDrm(uuid)
             Base64.encodeToString(
-                drm.getPropertyByteArray(MediaDrm.PROPERTY_DEVICE_UNIQUE_ID),
+                MediaDrm(uuid).getPropertyByteArray(MediaDrm.PROPERTY_DEVICE_UNIQUE_ID),
                 Base64.DEFAULT
             )
         } catch (e: Exception) {
