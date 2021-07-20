@@ -26,7 +26,7 @@ Step 2. Add the dependency
 
 ```gradle
 dependencies {
-    implementation 'com.github.devEyosiyas:AndroidID:1.0.1'
+    implementation 'com.github.devEyosiyas:AndroidID:1.0.2'
 }
 ```
 
@@ -42,7 +42,7 @@ Or Maven:
   
 <dependency>groupId>com.github.devEyosiyas</groupId>
 <artifactId>AndroidID</artifactId>
-<version>1.0.1</version>
+<version>1.0.2</version>
 </dependency>
 ```
 
@@ -57,10 +57,11 @@ Java
 ```
 Kotlin
 ```kotlin
-  val widevine: String = KotlinAndroidID.widevine() // The most reliable way
-  val commonPSSH: String = KotlinAndroidID.commonPSSH()
-  val clearKey: String = KotlinAndroidID.clearKey()
-  val playReady: String = KotlinAndroidID.playReady()
+  val id = KotlinAndroidID()
+  val widevine: String = id.widevine() // The most reliable way
+  val commonPSSH: String = id.commonPSSH()
+  val clearKey: String = id.clearKey()
+  val playReady: String = id.playReady()
 ```
 
 Author
